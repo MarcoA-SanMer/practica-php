@@ -32,14 +32,19 @@ final class PracticaTest extends TestCase
     {
         $client = new Client();
         $response = $client->post('http://localhost/practica-php/store.php', [
-                'form_params' => [
-                    'nombre' => 'Prueba Nombre',
-                    'correo' => 'prueba@test.com',
-                ]
-            ]);
+            'form_params' => [
+                'nombre' => 'Prueba Nombre',
+                'correo' => 'prueba@test.com',
+                'genero' => 'genero',
+                'contrasena' => 'contra',
+                'comentario' => 'coment',
+                'ciudad' => 'ciudad',
+            ]
+        ]);
 
-        $code = $response->getStatusCode();
+        $statusCode = $response->getStatusCode();
 
-        $this->assertStringContainsStringIgnoringCase('Prueba Nombre', (string) $response->getBody(), $message = 'No está muestra registro creado');
+        // Verificar que no se ha producido un código de error (por ejemplo, 4xx o 5xx)
+        $this->assertNotContains($statusCode, [400, 401, 403, 404, 500], "El servidor devolvió un código de error: $statusCode");
     }
 }

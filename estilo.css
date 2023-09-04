@@ -1,0 +1,105 @@
+/* Reset de estilos */
+body, h1, h2, p, ul, ol, li, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.488); /* Color de fondo*/
+    color: #333; /* Color de texto principal */
+    line-height: 1.6;
+}
+
+/* Estilos para el encabezado principal */
+header {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Estilo para la navegación */
+.nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+}
+
+.nav a:hover {
+    color: fuchsia;
+}
+
+/* Estilo para las secciones */
+section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para el formulario */
+form {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: white
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de envío */
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilo para hover de campos en el formulario*/
+
+#correo:hover, #nombre:hover, #contraseña:hover, #comentario:hover, #ciudad:hover, #interesa-contratarte:hover{
+    border-color: fuchsia;
+}
